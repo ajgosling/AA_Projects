@@ -111,6 +111,10 @@ class DOMNodeCollection {
     return returnNodes;
   }
 
+  find() {
+
+  }
+
 
 
 }
