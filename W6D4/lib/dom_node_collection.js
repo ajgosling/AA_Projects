@@ -84,12 +84,34 @@ class DOMNodeCollection {
   }
 
   children() {
-    const returnArr = [];
-    
+    let returnArr = [];
+
     this.each((el) => {
+      const children = Array.from(el.children);
+      returnArr = returnArr.concat(children);
+    });
+
+    let returnNodes = new DOMNodeCollection(returnArr);
+    return returnNodes;
+  }
+
+
+  parent() {
+    let returnArr = [];
+
+    this.each((el) => {
+      const parent = el.parentElement;
+      if (!returnArr.includes(parent)) {
+        returnArr = returnArr.concat(parent);
+      }
 
     });
+
+    let returnNodes = new DOMNodeCollection(returnArr);
+    return returnNodes;
   }
+
+
 
 }
 
