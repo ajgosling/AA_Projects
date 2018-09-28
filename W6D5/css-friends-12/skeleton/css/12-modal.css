@@ -1,0 +1,39 @@
+/* PHASE 12: Modal */
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 200px;
+  left: 900px;
+
+  padding: 30px;
+  /* background-color: lime; */
+  z-index: 2;
+  background: rgba(0,255,0,0.8);
+  border-radius: 10px;
+  border: 5px solid hotpink;
+  height: 150px;
+  width: 350px;
+}
+
+.modal-screen {
+
+}
+
+.modal-form {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  margin-top: 50px;
+}
+
+input {
+  margin-left: 20px;
+  background: SkyBlue;
+  border-radius: 5px;
+  height: 50px;
+  width: 320px;
+}
