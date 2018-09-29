@@ -12,6 +12,7 @@ class Tab extends React.Component{
 
   selectTab(num) {
     this.setState({selected: num});
+    // alert(num);
   }
 
   render() {
@@ -20,14 +21,14 @@ class Tab extends React.Component{
     const obj3 = this.props.tabContent[2];
 
     return (
-      <nav>
-        <ul class="flexfrog">
-          <h1> {obj1.title}</h1>
-          <h1> {obj2.title}</h1>
-          <h1> {obj3.title}</h1>
+      <nav className = "flexfrog-everything">
+        <ul className="flexfrog">
+          <h1 onClick = { () => this.selectTab(0)}> {obj1.title}</h1>
+          <h1 onClick = { () => this.selectTab(1)}> {obj2.title}</h1>
+          <h1 onClick = { () => this.selectTab(2)}> {obj3.title}</h1>
          </ul>
 
-        <article>
+        <article className="flexfrog-article">
           {this.props.tabContent[this.state.selected].content}
         </article>
 

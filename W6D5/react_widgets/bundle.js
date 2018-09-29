@@ -228,17 +228,35 @@ function (_React$Component) {
     value: function selectTab(num) {
       this.setState({
         selected: num
-      });
+      }); // alert(num);
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var obj1 = this.props.tabContent[0];
       var obj2 = this.props.tabContent[1];
       var obj3 = this.props.tabContent[2];
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        class: "flexfrog"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, " ", obj1.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, " ", obj2.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, " ", obj3.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, this.props.tabContent[this.state.selected].content));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: "flexfrog-everything"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "flexfrog"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        onClick: function onClick() {
+          return _this2.selectTab(0);
+        }
+      }, " ", obj1.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        onClick: function onClick() {
+          return _this2.selectTab(1);
+        }
+      }, " ", obj2.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        onClick: function onClick() {
+          return _this2.selectTab(2);
+        }
+      }, " ", obj3.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", {
+        className: "flexfrog-article"
+      }, this.props.tabContent[this.state.selected].content));
     }
   }]);
 
