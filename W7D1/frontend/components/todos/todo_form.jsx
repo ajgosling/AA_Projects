@@ -12,37 +12,44 @@ class TodoForm extends React.Component {
       done: false
     };
 
-    this.handleClick = this.handleClick.bind(this);
-  }
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
 
-  render() {
+      update(property) {
+        return e => this.setState({[property]: e.target.value});
+      }
 
-    return (
-      <div>
-        {this.state.id}
-        <label>Title:
-          <input id="form-title" type="text"></input>
+      handleSubmit(e) {
+        e.preventDefault();
+        const todo = Object.assign({}, this.state, { id: uniqueId() });
+        this.props.receiveTodo(todo);
+        this.setState({
+          title: "",
+          body: ""
+        }); // reset form
+      }
 
-        </label>
+      render() {
+        return (
+          <form className="todo-form" onSubmit={this.handleSubmit}>
+            <label>Title:
+              <input
+                className="input"
+                ref="title"
+                value={this.state.title}
+                onChange={this.update('title')}/>
+            </label>
+            <label>Body:
+              <input
+                className="input"
+                ref="body"
+                value={this.state.body}
+                onChange={this.update('body')}/>
+            </label>
+            <button className="create-button">Create Todo!</button>
+          </form>
+        );
+      }
+    };
 
-        <label>Body:
-          <input id="form-body" type="text"></input>
-        </label>
-        <button onClick={() => this.handleClick()}>Submit</button>
-      </div>
-    );
-  }
-
-  handleClick() {
-    this.setState(
-      {
-        title: document.getElementById("form-title").value,
-        body: document.getElementById("form-body").value
-      }, () => this.props.receiveTodo(this.state));
-
-  }
-
-}
-
-
-export default TodoForm;
+    export default TodoForm;

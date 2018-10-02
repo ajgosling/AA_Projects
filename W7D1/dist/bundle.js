@@ -181,6 +181,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_unique_id_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/unique_id.js */ "./frontend/util/unique_id.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -217,44 +219,58 @@ function (_React$Component) {
       body: '',
       done: false
     };
-    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
   }
 
   _createClass(TodoForm, [{
-    key: "render",
-    value: function render() {
+    key: "update",
+    value: function update(property) {
       var _this2 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.id, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Title:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "form-title",
-        type: "text"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Body:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "form-body",
-        type: "text"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: function onClick() {
-          return _this2.handleClick();
-        }
-      }, "Submit"));
+      return function (e) {
+        return _this2.setState(_defineProperty({}, property, e.target.value));
+      };
     }
   }, {
-    key: "handleClick",
-    value: function handleClick() {
-      var _this3 = this;
-
-      this.setState({
-        title: document.getElementById("form-title").value,
-        body: document.getElementById("form-body").value
-      }, function () {
-        return _this3.props.receiveTodo(_this3.state);
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      var todo = Object.assign({}, this.state, {
+        id: Object(_util_unique_id_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
       });
+      this.props.receiveTodo(todo);
+      this.setState({
+        title: "",
+        body: ""
+      }); // reset form
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "todo-form",
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Title:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "input",
+        ref: "title",
+        value: this.state.title,
+        onChange: this.update('title')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Body:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "input",
+        ref: "body",
+        value: this.state.body,
+        onChange: this.update('body')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "create-button"
+      }, "Create Todo!"));
     }
   }]);
 
   return TodoForm;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
+;
 /* harmony default export */ __webpack_exports__["default"] = (TodoForm);
 
 /***/ }),
