@@ -39,6 +39,8 @@ class TodoForm extends React.Component {
                 value={this.state.title}
                 onChange={this.update('title')}/>
             </label>
+            <br></br>
+            <br></br>  
             <label>Body:
               <input
                 className="input"
@@ -46,10 +48,12 @@ class TodoForm extends React.Component {
                 value={this.state.body}
                 onChange={this.update('body')}/>
             </label>
+            <br/>
+            <br/>
             <button className="create-button">Create Todo!</button>
           </form>
         );
       }
-    };
+    }
 
     export default TodoForm;
