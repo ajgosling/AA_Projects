@@ -191,8 +191,14 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this = this;
+
       if (!this.props.pokemon) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null);
+        return null;
+      }
+
+      if (!this.props.pokemon.moves) {
+        return null;
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -201,12 +207,15 @@ function (_React$Component) {
         className: this.props.pokemon.poke_type
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: this.props.pokemon.image_url
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Attack: ", this.props.pokemon.attack, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Defense: ", this.props.pokemon.defense, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "move-detail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Attack: ", this.props.pokemon.attack, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Defense: ", this.props.pokemon.defense, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Moves: ", this.props.pokemon.moves.join(", "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Items:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "items-list"
       }, Object.keys(this.props.items).map(function (id) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          src: "/assets/pokemon_egg.svg"
-        });
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "elliot",
+          src: _this.props.items[id].image_url
+        }));
       })));
     }
   }]);

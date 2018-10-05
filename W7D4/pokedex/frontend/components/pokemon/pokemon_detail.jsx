@@ -14,8 +14,14 @@ class PokemonDetail extends React.Component {
 
   render () {
     if (!this.props.pokemon) {
-      return (<h1></h1>);
+      return null;
     }
+
+    if (!this.props.pokemon.moves) {
+      return null;
+    }
+
+
     return (
       <div className="poke-detail">
 
@@ -24,15 +30,20 @@ class PokemonDetail extends React.Component {
           <br></br>
           <img src={this.props.pokemon.image_url}></img>
         </div>
-
-        <br></br>
-        Attack: {this.props.pokemon.attack}
-        <br></br>
-        Defense: {this.props.pokemon.defense}
-        <br></br>
+          <div className="move-detail">
+          <br></br>
+          Attack: {this.props.pokemon.attack}
+          <br></br>
+          Defense: {this.props.pokemon.defense}
+          <br></br><br></br>
+          Moves: {this.props.pokemon.moves.join(", ")}
+          <br></br><br></br>
+        </div>
+        <br></br><br></br>
+        Items:
         <ul className="items-list">
-          {Object.keys(this.props.items).map((id)=> {
-            return (<img src="/assets/pokemon_egg.svg"/>);
+          {(Object.keys(this.props.items)).map((id)=> {
+            return (<li><img className="elliot" src={this.props.items[id].image_url}/></li>);
           })}
 
         </ul>
