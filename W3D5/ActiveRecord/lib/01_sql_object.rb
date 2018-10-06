@@ -89,6 +89,7 @@ class SQLObject
   def attribute_values
     self.class.columns.map {|name| self.send(name)}
   end
+  Dog.class == SQLObject.columns
 
   def insert
     question_marks = (["?"] * (self.attribute_values.count - 1)).join(", ")
@@ -136,6 +137,6 @@ class SQLObject
       insert
     else
       update
-    end 
+    end
   end
 end

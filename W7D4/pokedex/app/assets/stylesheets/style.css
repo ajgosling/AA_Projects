@@ -1,0 +1,252 @@
+.pokedex {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.pokedex-image {
+  width: 20px;
+  height: 20px;
+  padding: 0px 5px;
+}
+
+.poke-list {
+  width: 150px;
+  border-top: 1px solid black;
+  padding: 0px;
+  margin: 20px;
+}
+
+.pokedex-list-item {
+  border-bottom: 1px solid black;
+  padding: 3px 0px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+}
+
+.pokedex-list-item:hover {
+  background-color: deeppink;
+}
+
+.poke-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 80%;
+  color: white;
+  background-color: gray;
+  border-radius: 5px;
+
+  margin: 20px 0px;
+}
+
+.detail-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 80%;
+
+}
+
+.move-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 30%;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+
+
+
+
+
+.items-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+
+  width: 30%;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid black;
+  height: 100px;
+}
+
+.items-list li {
+  list-style-type: none;
+}
+
+.elliot {
+  height: 80%;
+  width: 80px;
+}
+
+
+.grass {
+  background-image: url("https://img00.deviantart.net/f80b/i/2014/042/7/d/grass_pokemon_energy_wallpaper_by_elbarnzo-d755hbj.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.psychic {
+  background-image: url("https://img00.deviantart.net/3d74/i/2014/042/b/5/physic_pokemon_energy_wallpaper_by_elbarnzo-d759r4f.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ground {
+  background-image: url("https://pre00.deviantart.net/5049/th/pre/f/2017/209/d/c/ground_type_pokemon_wallpaper_by_elbarnzo-dbi2ame.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.rock {
+  background-image: url("https://pre00.deviantart.net/5117/th/pre/f/2017/209/9/6/rock_type_pokemon_wallpaper_by_elbarnzo-dbi2b77.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ghost {
+  background-image: url("https://img00.deviantart.net/c868/i/2016/326/b/8/ghost_type_pokemon_wallpaper_by_elbarnzo-dapamlc.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.poison {
+  background-image: url("https://pre00.deviantart.net/7ce7/th/pre/f/2017/209/f/b/poison_type_pokemon_wallpaper_by_elbarnzo-dbi2b02.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.water, .ice {
+  background-image: url("https://img00.deviantart.net/8a84/i/2014/042/8/6/water_pokemon_energy_wallpaper_by_elbarnzo-d75ebft.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fire {
+  background-image: url("https://img00.deviantart.net/0e94/i/2014/042/0/8/fire_pokemon_energy_wallpaper_by_elbarnzo-d7519pz.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.normal {
+  background-image: url("https://img00.deviantart.net/cb67/i/2014/031/0/b/colorless_pokemon_energy_wallpaper_by_elbarnzo-d74i220.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.flying {
+  background-image: url("https://orig00.deviantart.net/6434/f/2016/317/f/7/flying_type_pokemon_energy_by_elbarnzo-daoas8t.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.electric {
+  background-image: url("https://img00.deviantart.net/a563/i/2014/042/3/2/electric_pokemon_energy_wallpaper_by_elbarnzo-d74n7g8.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fighting {
+  background-image: url("https://img00.deviantart.net/9d02/i/2014/042/0/9/fighting_pokemon_energy_wallpaper_by_elbarnzo-d74vo4c.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.bug {
+  background-image: url("https://pre00.deviantart.net/848d/th/pre/f/2016/275/6/7/bug_type_pokemon_wallpaper_by_elbarnzo-dajncbl.png");
+
+  width: 80%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3px solid white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

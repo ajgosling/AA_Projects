@@ -1,0 +1,50 @@
+.clock-time {
+  background-color: DodgerBlue;
+  display: inline-block;
+  color: PapayaWhip;
+}
+
+.McSpicyFont {
+  font-family: 'Gloria Hallelujah', cursive;
+  border: 3px solid Indigo;
+  background: LightCyan;
+  width: 500px;
+  padding: 10px;
+}
+
+.flexfrog {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 300px;
+  justify-content: space-around;
+  /* border: 4px solid maroon; */
+  padding-inline-start: 0px;
+}
+
+.flexfrog h1 {
+  border: 3px solid maroon;
+  height: 100%;
+  width: 33%;
+  margin: 0px;
+}
+
+.flexfrog-article{
+  width: 294px;
+  height: 4000px;
+  font-size: 100px;
+  background-image: url(https://orig00.deviantart.net/00f5/f/2013/099/e/6/patrick_starmie_by_da_blue_monkey-d6126w0.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: white;
+}
+
+.flexfrog-everything{
+  width: 300px;
+  border: 3px solid maroon;
+  border-top: 0px;
+}
+
+.clicked{
+  border-bottom: none;
+}

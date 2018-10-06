@@ -1,0 +1,30 @@
+
+<h2>Showing a post on Rika Reddit</h2>
+<br>
+<%= @post.title %> by <%= @post.author.username %> <br>
+Content: <%= @post.content %> <br><br>
+
+<!-- upvote -->
+<!-- downvote button -->
+
+<% @post.subs.each do |sub| %>
+  <a href="<%= sub_url(sub) %>"> <%= sub.title %> </a>
+  <br>
+<% end %>
+
+<h3>BANISH THE POST! KILL IT!</h3>
+
+<form class="" action="<%= post_url(@post) %>" method="post">
+  <input type="hidden" name="authenticity_token"
+  value="<%=form_authenticity_token %>">
+
+  <input type="hidden" name="_method" value="delete">
+
+  <input type="submit" name="" value="GOODBYE POST">
+</form>
+
+<% @post.comments.each do |comment| %>
+  <%= comment.content %>
+<% end %>
+
+<a href="<%= new_post_comment_url(@post)%> ">New Comment</a>
